@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Teste com iframe</title>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -13,11 +15,25 @@
 	  ga('create', 'UA-62000814-1', 'auto');
 	  ga('send', 'pageview');
 	</script>
+
+
+	<style type="text/css">
+		#iframe iframe{
+			width: 100%;
+			height: 600px;
+		}
+	</style>
 </head>
 <body>
 	<h1>Oi, sou uma página sem nada</h1>
 	<p>ok, quase sem nada, vezes bacon, vezes pudim, mamae</p>
 
-	<iframe src="http://lucida-brasil.github.io/area-de-treinamento/examples/filipe/" width="500" height="500"></iframe>
+	<div id='iframe'></div>
+
+	<script type="text/javascript" src="lucida.js"></script>
+
+	<script type="text/javascript">
+		window.lucida.addiFrame('iframe', 'http://lucida-brasil.github.io/area-de-treinamento/examples/filipe/');
+	</script>
 </body>
 </html>
